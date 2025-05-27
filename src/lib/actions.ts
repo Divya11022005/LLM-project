@@ -1,7 +1,7 @@
 // src/lib/actions.ts
 "use server";
 
-import { explainMarkdownContent as gen explicaciónMarkdownContent } from "@/ai/flows/explain-markdown";
+import { explainMarkdownContent as genExplainMarkdownContent } from "@/ai/flows/explain-markdown";
 import type { ExplainMarkdownContentOutput } from "@/ai/flows/explain-markdown";
 import { marked } from 'marked';
 
@@ -30,7 +30,7 @@ export async function getMarkdownExplanation(markdownContent: string): Promise<s
     return "Please provide some Markdown content to explain.";
   }
   try {
-    const result: ExplainMarkdownContentOutput = await gen explicaciónMarkdownContent({ markdownContent });
+    const result: ExplainMarkdownContentOutput = await genExplainMarkdownContent({ markdownContent });
     return result.explanation;
   } catch (error) {
     console.error("Error getting Markdown explanation:", error);
