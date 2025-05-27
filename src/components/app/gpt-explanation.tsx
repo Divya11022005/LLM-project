@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Sparkles } from 'lucide-react';
@@ -19,8 +20,8 @@ export function GptExplanation({ explanation, isLoading }: GptExplanationProps) 
           AI Explanation
         </CardTitle>
       </CardHeader>
-      <CardContent className="flex-grow p-0">
-        <ScrollArea className="h-[300px] md:h-full rounded-md border m-4">
+      <CardContent className="flex-grow flex flex-col p-0 overflow-hidden">
+        <ScrollArea className="flex-grow rounded-md border m-4">
           <div className="p-4">
             {isLoading ? (
               <div className="space-y-2">

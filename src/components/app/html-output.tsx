@@ -1,3 +1,4 @@
+
 "use client";
 
 import { ClipboardCopy } from 'lucide-react';
@@ -47,8 +48,8 @@ export function HtmlOutput({ htmlContent }: HtmlOutputProps) {
           Copy HTML
         </Button>
       </CardHeader>
-      <CardContent className="flex-grow p-0">
-        <ScrollArea className="h-[300px] md:h-full rounded-md border m-4">
+      <CardContent className="flex-grow flex flex-col p-0 overflow-hidden">
+        <ScrollArea className="flex-grow rounded-md border m-4">
           {htmlContent ? (
             <div
               className="prose dark:prose-invert p-4"
